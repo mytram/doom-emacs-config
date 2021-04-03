@@ -93,3 +93,13 @@
 
 ;; for .tsx, i use lsp for formatting, so this is not needed
 (setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
+
+;; Magit
+
+(global-diff-hl-mode)
+(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+
+;;
+(global-set-key (kbd "C-x \\") 'align-regexp)
+(global-set-key (kbd "C-x rp") 'replace-regexp)
