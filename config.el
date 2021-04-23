@@ -108,3 +108,5 @@
 ;;
 (global-set-key (kbd "C-x \\") 'align-regexp)
 (global-set-key (kbd "C-x rp") 'replace-regexp)
+
+(global-undo-tree-mode)
