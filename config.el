@@ -28,7 +28,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Marty"
-      user-mail-address "marty@bugherd.com")
+      user-mail-address "mytram2@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -110,3 +110,5 @@
 (global-set-key (kbd "C-x rp") 'replace-regexp)
 
 (global-undo-tree-mode)
+
+(exec-path-from-shell-initialize)
