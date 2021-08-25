@@ -13,12 +13,12 @@
 (defun small-font ()
   "Set small font."
   (interactive)
-  (dot-set-font "Hack Nerd Font Mono" "15"))
+  (dot-set-font "Hack Nerd Font Mono" "13"))
 
 (defun big-font ()
   "Set big font."
   (interactive)
-  (dot-set-font "Hack Nerd Font Mono" "16"))
+  (dot-set-font "Hack Nerd Font Mono" "15"))
 
 (defun large-font ()
   "Set large font."
@@ -55,7 +55,7 @@
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type nil)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -96,19 +96,22 @@
 ;; for .ts, i use prettier
 (setq-hook! 'typescript-mode-hook +format-with-lsp nil)
 
-;; for .tsx, i use lsp for formatting, so this is not needed
+;; for .tsx, i use prettier
 (setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
 
 ;; Magit
 
-(global-diff-hl-mode)
-(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
-(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+;(global-diff-hl-mode)
+
+;(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
+;(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
 ;;
 (global-set-key (kbd "C-x \\") 'align-regexp)
 (global-set-key (kbd "C-x rp") 'replace-regexp)
 
-(global-undo-tree-mode)
+; (global-undo-tree-mode)
+
+(remove-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 (exec-path-from-shell-initialize)
