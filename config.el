@@ -112,6 +112,5 @@
 
 ; (global-undo-tree-mode)
 
-(remove-hook 'lsp-mode-hook 'lsp-ui-mode)
-
-(exec-path-from-shell-initialize)
+;(remove-hook 'lsp-mode-hook 'lsp-ui-mode)
+(toggle-debug-on-error t)
