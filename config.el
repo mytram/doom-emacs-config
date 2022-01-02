@@ -18,7 +18,7 @@
 (defun big-font ()
   "Set big font."
   (interactive)
-  (dot-set-font "Hack Nerd Font Mono" "15"))
+  (dot-set-font "Hack Nerd Font Mono" "14"))
 
 (defun large-font ()
   "Set large font."
@@ -93,24 +93,11 @@
          (rename-buffer "*github-ui*")
          (cd "~/github")))
 
-;; for .ts, i use prettier
-(setq-hook! 'typescript-mode-hook +format-with-lsp nil)
-
-;; for .tsx, i use prettier
-(setq-hook! 'typescript-tsx-mode-hook +format-with-lsp nil)
-
-;; Magit
-
-;(global-diff-hl-mode)
-
-;(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-pre-refresh)
-;(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
-
 ;;
 (global-set-key (kbd "C-x \\") 'align-regexp)
 (global-set-key (kbd "C-x rp") 'replace-regexp)
 
-; (global-undo-tree-mode)
+(setq +format-with-lsp nil)
 
 ;(remove-hook 'lsp-mode-hook 'lsp-ui-mode)
-(toggle-debug-on-error t)
+; (toggle-debug-on-error t)
