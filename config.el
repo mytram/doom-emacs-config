@@ -18,7 +18,7 @@
 (defun big-font ()
   "Set big font."
   (interactive)
-  (dot-set-font "Hack Nerd Font Mono" "14"))
+  (dot-set-font "Hack Nerd Font Mono" "15"))
 
 (defun large-font ()
   "Set large font."
